@@ -1,0 +1,44 @@
+<main>
+	<a href="/ali/cadastrarAli">
+		<div id="cadastro">
+			<div id="textoCadastro">
+				Cadastrar um Ali <br />
+				Meu Bebe?
+			</div>
+		</div>
+	</a>
+
+	<div id="tituloCadastrados">
+		<p>Ali's Cadastrados:</p>
+	</div>
+	{{#each ali}}
+	
+		<div class="iten">
+			<div class="img">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTmrwZwTAzU0muRLLkrqr-WgRZDb4bTiaDUA&usqp=CAU" />
+			</div>
+			<div class="info">
+				<p>{{this.nome}}</p>
+				<p>R$ {{this.preco}}</p>
+				<p>Numero: {{@index}}</p>
+				<div class="botoes">
+					<a href="{{this.link}}" >
+						<input type="submit" value="Visitar" name="Visitar" class="olhar"/>
+					</a>
+					
+					<a href="/ali/editarAli/{{this.id_ali}}/{{encodeURIComponent this.nome}}/{{this.preco}}/{{encodeURIComponent this.link}}">
+    <input type="submit" value="Editar" name="Editar" class="editar"/>
+</a>
+
+					<form class="borde-0 m-0" action="/ali/excluirAli" method="POST" >
+						<input type="hidden" name="id_ali" value="{{this.id_ali}}" />
+						<a href="" >
+							<input type="submit" value="Excluir" name="Excluir" class="excluir"/>
+						</a>
+					</form>
+				</div>
+			</div>
+		</div>
+	
+	{{/each}}
+</main>

@@ -1,0 +1,16 @@
+<main>
+    <div id="tituloCadastrados">
+        <p>Editar Beleza:</p>
+    </div>
+
+    <form action="/beleza/editarBeleza" method="POST">
+        <label for="nome">Nome:</label><br />
+        <input type="text" name="nome" id="nome" value="{{beleza.nome}}"/><br />
+        <label for="preco">Preço:</label><br />
+        <input type="number" name="preco" id="preco" value="{{beleza.preco}}"/><br />
+        <label for="link">Link:</label><br />
+        <input type="text" name="link" id="link" value="{{beleza.link}}"/><br />
+        <input type="hidden" name="id_beleza" id="id_beleza" value="{{beleza.id_beleza}}">
+        <button type="submit">Atualizar</button>
+    </form>
+</main>

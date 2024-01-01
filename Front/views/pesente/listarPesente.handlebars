@@ -1,0 +1,44 @@
+<main>
+	<a href="/pesente/cadastrarPesente">
+		<div id="cadastro">
+			<div id="textoCadastro">
+				Cadastrar um Pesente <br />
+				Meu Neném?
+			</div>
+		</div>
+	</a>
+
+	<div id="tituloCadastrados">
+		<p>Pesente's Cadastrados:</p>
+	</div>
+	{{#each pesente}}
+	
+		<div class="iten">
+			<div class="img">
+				<img src="https://img.irroba.com.br/fit-in/600x600/filters:fill(transparent):quality(80)/rettacom/catalog/zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzbanner0404/design-sem-nome-2023-04-12t090733531.png" />
+			</div>
+			<div class="info">
+				<p>{{this.nome}}</p>
+				<p>R$ {{this.preco}}</p>
+				<p>Numero: {{@index}}</p>
+				<div class="botoes">
+					<a href="{{this.link}}" >
+						<input type="submit" value="Visitar" name="Visitar" class="olhar"/>
+					</a>
+					
+					<a href="/pesente/editarPesente/{{this.id_pesente}}/{{encodeURIComponent this.nome}}/{{encodeURIComponent this.linkIMG}}/{{this.preco}}/{{encodeURIComponent this.link}}">
+    <input type="submit" value="Editar" name="Editar" class="editar"/>
+</a>
+
+					<form class="borde-0 m-0" action="/pesente/excluirPesente" method="POST" >
+						<input type="hidden" name="id_pesente" value="{{this.id_pesente}}" />
+						<a href="" >
+							<input type="submit" value="Excluir" name="Excluir" class="excluir"/>
+						</a>
+					</form>
+				</div>
+			</div>
+		</div>
+	
+	{{/each}}
+</main>

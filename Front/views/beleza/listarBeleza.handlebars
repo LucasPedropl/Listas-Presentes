@@ -1,0 +1,45 @@
+<main>
+	<a href="/beleza/cadastrarBeleza">
+		<div id="cadastro">
+			<div id="textoCadastro">
+				Cadastrar Beleza<br />
+				é dificil quando<br />
+				vc🫵 ja é a definição dela
+			</div>
+		</div>
+	</a>
+
+	<div id="tituloCadastrados">
+		<p>Belezas Cadastradas:</p>
+	</div>
+	{{#each beleza}}
+
+	<div class="iten">
+		<div class="img">
+			<img src="https://t3.ftcdn.net/jpg/03/06/53/82/360_F_306538274_niEiczxNBIigCDmlq9wUV0kZYUTCY8xC.jpg" />
+		</div>
+		<div class="info">
+			<p>{{this.nome}}</p>
+			<p>R$ {{this.preco}}</p>
+			<p>Numero: {{@index}}</p>
+			<div class="botoes">
+				<a href="{{this.link}}">
+					<input type="submit" value="Visitar" name="Visitar" class="olhar" />
+				</a>
+
+				<a href="/beleza/editarBeleza/{{this.id_beleza}}/{{encodeURIComponent this.nome}}/{{this.preco}}/{{encodeURIComponent this.link}}">
+					<input type="submit" value="Editar" name="Editar" class="editar" />
+				</a>
+
+				<form class="borde-0 m-0" action="/beleza/excluirBeleza" method="POST">
+					<input type="hidden" name="id_beleza" value="{{this.id_beleza}}" />
+					<a href="">
+						<input type="submit" value="Excluir" name="Excluir" class="excluir" />
+					</a>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	{{/each}}
+</main>

@@ -1,0 +1,16 @@
+<main>
+    <div id="tituloCadastrados">
+        <p>Editar Ali:</p>
+    </div>
+
+    <form action="/ali/editarAli" method="POST">
+        <label for="nome">Nome:</label><br />
+        <input type="text" name="nome" id="nome" value="{{ali.nome}}"/><br />
+        <label for="preco">Preço:</label><br />
+        <input type="number" name="preco" id="preco" value="{{ali.preco}}"/><br />
+        <label for="link">Link:</label><br />
+        <input type="text" name="link" id="link" value="{{ali.link}}"/><br />
+        <input type="hidden" name="id_ali" id="id_ali" value="{{ali.id_ali}}">
+        <button type="submit">Atualizar</button>
+    </form>
+</main>

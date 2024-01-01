@@ -1,0 +1,243 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script:wght@400;700&family=Montserrat:wght@100;400;900&display=swap');
+
+*{
+    margin: 0px;
+    border: 0px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+a{
+    text-decoration: none;
+    color: #ffeefe;
+}
+
+body{
+    background-color: #ffdbfd;
+    margin: 0;
+}
+
+nav{
+    height: 30px;
+    width: 100%;
+    background-color: #241f25;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+main{
+    padding: 20px;
+    padding-bottom: 100%;
+}
+
+a:visited {
+    background-color: transparent;
+}
+
+#BemVindo{
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
+    border-radius: 30px;
+    text-align: center;
+    background-color: #df145e;
+    color: #ffffff;
+    margin-bottom: 20px;
+    
+}
+
+#opcoes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.opt{
+    width: 80%;
+    border-radius: 15px;
+    height: 120px;
+    color: black;
+    box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.192);
+}
+
+.opt:active{
+    background-color: #241f25;
+}
+
+.t1, .t2 ,.t3{
+    font-size: 20px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    color: white;
+}
+
+.t1{
+    background-color: #df145e;
+}
+
+.t2{
+    background-color: #df145e;
+}
+
+.t3{
+    background-color: #df145e;
+}
+
+.optCorpo{
+    background-color: #ffffff;
+    height: 50%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: #241f25b0;
+}
+
+#areiaSorte{
+    text-align: center;
+    border-radius: 15px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#areiaSorte h5{
+    width: 100%;
+    height: 40px;
+    font-size: 25px;
+    background-color: #df145e;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    color: white;
+}
+
+#areaSorteio{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#areaNumero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.areaNum{
+    width: 30%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 50px;
+}
+
+.tituloNum{
+    height: 50%;
+    background-color: #241f25b0;
+    color: white;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.Num{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    background-color: #241f252d;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-size: 20px;
+}
+
+#button{
+    width: 100%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#button:hover{
+    background-color: #241f256f;
+    
+}
+
+#button:active{
+    background-color: #241f2540;
+}
+
+button{
+    height: 40px;
+    padding: 8px;
+    width: 100%;
+    font-size: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #241f25b0;
+    color: white;
+}
+
+footer{
+    height: 80px;
+    width: 100%;
+    background-color: #241f25;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.footerIten{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.footerIten i{
+    font-size: 30px;
+}
+
+.active{
+    color: #df145e;
+}
+
+/* Para telas com largura máxima de 1080 pixels */
+@media (min-width: 1080px) {
+    main {
+        margin-left: 300px;
+        margin-right: 300px;
+    }
+}
+
