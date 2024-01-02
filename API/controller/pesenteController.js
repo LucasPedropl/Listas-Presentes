@@ -3,15 +3,14 @@ module.exports = class pesenteController {
 	//CREATE
 	static async PesenteCreate(req, res) {
 		let nome = req.body.nome;
-
 		let preco = req.body.preco;
 		let link = req.body.link;
-
+		let linkIMG = req.body.linkIMG;
 		const pesente = {
 			nome: nome,
-
 			preco: preco,
 			link: link,
+			linkIMG: linkIMG,
 		};
 		await Pesente.create(pesente);
 	}
@@ -32,14 +31,14 @@ module.exports = class pesenteController {
 	static async PesenteUpdate(req, res) {
 		const id_pesente = req.params.id;
 		let nome = req.body.nome;
-
 		let preco = req.body.preco;
 		let link = req.body.link;
+		let linkIMG = req.body.linkIMG;
 		const pesente = {
 			nome: nome,
-
 			preco: preco,
 			link: link,
+			linkIMG: linkIMG,
 		};
 		await Pesente.update(pesente, { where: { id_pesente: id_pesente } });
 	}

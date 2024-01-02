@@ -3,15 +3,14 @@ module.exports = class belezaController {
 	//CREATE
 	static async BelezaCreate(req, res) {
 		let nome = req.body.nome;
-
 		let preco = req.body.preco;
 		let link = req.body.link;
-
+		let linkIMG = req.body.linkIMG;
 		const beleza = {
 			nome: nome,
-
 			preco: preco,
 			link: link,
+			linkIMG: linkIMG,
 		};
 		await Beleza.create(beleza);
 	}
@@ -32,12 +31,12 @@ module.exports = class belezaController {
 	static async BelezaUpdate(req, res) {
 		const id_beleza = req.params.id;
 		let nome = req.body.nome;
-
 		let preco = req.body.preco;
 		let link = req.body.link;
+		let linkIMG = req.body.linkIMG;
 		const beleza = {
 			nome: nome,
-
+			linkIMG: linkIMG,
 			preco: preco,
 			link: link,
 		};

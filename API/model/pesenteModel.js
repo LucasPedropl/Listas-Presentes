@@ -21,6 +21,10 @@ const Pesente = database.define(
 			type: Sequelize.STRING,
 			allowNull: false,
 		},
+		linkIMG: {
+			type: Sequelize.STRING,
+			allowNull: false,
+		},
 	},
 	{ database, modelname: 'pesente', tableName: 'pesentes' }
 );

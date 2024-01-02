@@ -15,7 +15,7 @@
 	
 		<div class="iten">
 			<div class="img">
-				<img src="https://img.irroba.com.br/fit-in/600x600/filters:fill(transparent):quality(80)/rettacom/catalog/zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzbanner0404/design-sem-nome-2023-04-12t090733531.png" />
+				<img src="{{this.linkIMG}}" />
 			</div>
 			<div class="info">
 				<p>{{this.nome}}</p>
@@ -26,7 +26,7 @@
 						<input type="submit" value="Visitar" name="Visitar" class="olhar"/>
 					</a>
 					
-					<a href="/pesente/editarPesente/{{this.id_pesente}}/{{encodeURIComponent this.nome}}/{{encodeURIComponent this.linkIMG}}/{{this.preco}}/{{encodeURIComponent this.link}}">
+					<a href="/pesente/editarPesente/{{this.id_pesente}}/{{encodeURIComponent this.nome}}/{{this.preco}}/{{encodeURIComponent this.link}}/{{encodeURIComponent this.linkIMG}}">
     <input type="submit" value="Editar" name="Editar" class="editar"/>
 </a>
 

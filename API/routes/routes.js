@@ -18,7 +18,8 @@ router.get('/', (req, res) => {
 // Requisições Ali
 router.post('/add_alis', aliController.AliCreate);
 router.get('/alis/:id?', aliController.AliListar);
-router.put('/alis_update/:id', aliController.AliUpdate);
+router.post('/update_alis/:id', aliController.UpdateAli);
+router.put('/alis_update', aliController.AliUpdate);
 router.delete('/alis_delete/:id', aliController.AliDelete);
 router.get('/alis_count', aliController.AliCount);
 

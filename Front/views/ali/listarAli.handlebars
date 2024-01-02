@@ -15,7 +15,7 @@
 	
 		<div class="iten">
 			<div class="img">
-				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTmrwZwTAzU0muRLLkrqr-WgRZDb4bTiaDUA&usqp=CAU" />
+				<img src="{{this.linkIMG}}" />
 			</div>
 			<div class="info">
 				<p>{{this.nome}}</p>
@@ -26,8 +26,10 @@
 						<input type="submit" value="Visitar" name="Visitar" class="olhar"/>
 					</a>
 					
-					<a href="/ali/editarAli/{{this.id_ali}}/{{encodeURIComponent this.nome}}/{{this.preco}}/{{encodeURIComponent this.link}}">
+					<a href="/ali/editarAli/{{this.id_ali}}/{{encodeURIComponent this.nome}}/{{this.preco}}/{{encodeURIComponent this.link}}/{{encodeURIComponent this.linkIMG}}">
     <input type="submit" value="Editar" name="Editar" class="editar"/>
+</a>
+
 </a>
 
 					<form class="borde-0 m-0" action="/ali/excluirAli" method="POST" >

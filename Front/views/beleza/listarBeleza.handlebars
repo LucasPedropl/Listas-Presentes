@@ -16,7 +16,7 @@
 
 	<div class="iten">
 		<div class="img">
-			<img src="https://t3.ftcdn.net/jpg/03/06/53/82/360_F_306538274_niEiczxNBIigCDmlq9wUV0kZYUTCY8xC.jpg" />
+			<img src="{{this.linkIMG}}" />
 		</div>
 		<div class="info">
 			<p>{{this.nome}}</p>
@@ -27,7 +27,7 @@
 					<input type="submit" value="Visitar" name="Visitar" class="olhar" />
 				</a>
 
-				<a href="/beleza/editarBeleza/{{this.id_beleza}}/{{encodeURIComponent this.nome}}/{{this.preco}}/{{encodeURIComponent this.link}}">
+				<a href="/beleza/editarBeleza/{{this.id_beleza}}/{{encodeURIComponent this.nome}}/{{this.preco}}/{{encodeURIComponent this.link}}/{{encodeURIComponent this.linkIMG}}">
 					<input type="submit" value="Editar" name="Editar" class="editar" />
 				</a>
 

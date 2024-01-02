@@ -19,12 +19,13 @@ router.post('/ali/cadastrarAli', aliServices.AliCreate);
 //Listar Ali
 router.get('/ali/listarAli', aliServices.AliListar);
 //Editar Ali
-router.get('/ali/editarAli/:id_ali/:nome/:preco/:link', (req, res) => {
+router.get('/ali/editarAli/:id_ali/:nome/:preco/:link/:linkIMG', (req, res) => {
 	let ali = {
 		id_ali: req.params.id_ali,
 		nome: decodeURIComponent(req.params.nome),
 		preco: req.params.preco,
 		link: decodeURIComponent(req.params.link),
+		linkIMG: decodeURIComponent(req.params.linkIMG),
 	};
 	res.render('ali/editarAli', { ali });
 });
@@ -46,12 +47,13 @@ router.post('/beleza/cadastrarBeleza', belezaServices.BelezaCreate);
 //Listar Beleza
 router.get('/beleza/listarBeleza', belezaServices.BelezaListar);
 //Editar Beleza
-router.get('/beleza/editarBeleza/:id_beleza/:nome/:preco/:link', (req, res) => {
+router.get('/beleza/editarBeleza/:id_beleza/:nome/:preco/:link/:linkIMG', (req, res) => {
 	let beleza = {
 		id_beleza: req.params.id_beleza,
 		nome: decodeURIComponent(req.params.nome),
 		preco: req.params.preco,
 		link: decodeURIComponent(req.params.link),
+		linkIMG: decodeURIComponent(req.params.linkIMG),
 	};
 	res.render('beleza/editarBeleza', { beleza });
 });
@@ -71,12 +73,13 @@ router.post('/pesente/cadastrarPesente', pesenteServices.PesenteCreate);
 //Listar Pesente
 router.get('/pesente/listarPesente', pesenteServices.PesenteListar);
 //Editar Pesente
-router.get('/pesente/editarPesente/:id_pesente/:nome/:preco/:link', (req, res) => {
+router.get('/pesente/editarPesente/:id_pesente/:nome/:preco/:link/:linkIMG', (req, res) => {
 	let pesente = {
 		id_pesente: req.params.id_pesente,
 		nome: decodeURIComponent(req.params.nome),
 		preco: req.params.preco,
 		link: decodeURIComponent(req.params.link),
+		linkIMG: decodeURIComponent(req.params.linkIMG),
 	};
 	res.render('pesente/editarPesente', { pesente });
 });

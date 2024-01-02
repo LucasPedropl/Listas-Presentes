@@ -36,6 +36,29 @@ module.exports = class Services {
 	}
 
 	// UPDATE
+
+	static async UpdateAli(req, res) {
+		try {
+			let id_ali = req.body.id_ali;
+	
+			const options = {
+				url: 'http://localhost:3000/update_alis/' + id_ali,
+				method: 'POST',
+				data: { id_ali: id_ali },
+			};
+	
+			const response = await axios(options);
+			console.log(response.data);
+	
+			const ali = response.data;
+			res.render('ali/editarAli', { ali });
+		} catch (error) {
+			console.error(error);
+			res.status(500).json({ error: 'Erro ao ir para update' });
+		}
+	}
+	
+
 	static async AliUpdate(req, res) {
 		try {
 			let valores = req.body;
@@ -64,10 +87,10 @@ module.exports = class Services {
 			res.send('<script>window.location.reload();</script>');
 		} catch (error) {
 			console.error(error);
-			res.status(500).json({ error: 'Erro no delete' });
+			res.status(500).json({ error: 'Erro no delete' }); 
 		}
 	}
-	
+
 	// COUNT
 	static async AliCount() {
 		try {

@@ -21,6 +21,10 @@ const Beleza = database.define(
 			type: Sequelize.STRING,
 			allowNull: false,
 		},
+		linkIMG: {
+			type: Sequelize.STRING,
+			allowNull: false,
+		},
 	},
 	{ database, modelname: 'beleza', tableName: 'belezas' }
 );

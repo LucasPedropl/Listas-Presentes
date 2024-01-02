@@ -21,6 +21,10 @@ const Ali = database.define(
 			type: Sequelize.STRING,
 			allowNull: false,
 		},
+		linkIMG: {
+			type: Sequelize.STRING,
+			allowNull: true,
+		},
 	},
 	{ database, modelname: 'ali', tableName: 'alis' }
 );

@@ -116,8 +116,7 @@ main{
     border-top-left-radius: 15px;
     border: 1px solid black;
     gap: 10px;
-
-
+    padding-bottom: -100px;
 }
 
 .img{
@@ -146,6 +145,10 @@ main{
     height: 100%;
     width: 100%;
     border-radius: 15px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom: 1px solid black;
+        border-right: 1px solid black;
 }
 
 .info{
@@ -175,6 +178,37 @@ main{
 
 .botoes input{
     height: 30px;
+}
+
+@media (max-width: 580px) {
+    .iten{
+        padding-bottom: -100px;
+    }
+    .iten{
+        font-size: 10px;
+        
+    }
+    .img{
+        width: 40%;
+        height: 100%;
+        margin-bottom: -2px;
+    }
+    .botoes{
+        display: flex;
+        gap: 2px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        margin-right: 5px;
+    }
+    .botoes input{
+        height: 20px;
+        font-size: 8px;
+        width: 40px;
+        margin-left: 5px;
+        text-align: center;
+        display: flex;
+    }
+    
 }
 
 .olhar{
