@@ -28,6 +28,32 @@ module.exports = class pesenteController {
 		}
 	}
 	//UPDATE
+	static async UpdatePesente(req, res) {
+		try {
+			let id_pesente = req.params.id;
+
+			if (id_pesente) {
+				console.log(id_pesente);
+				const pesente = await Pesente.findOne({
+					where: { id_pesente: id_pesente },
+				});
+
+				if (!pesente) {
+					return res.status(404).json({ error: 'Pesente não encontrado' });
+				}
+
+				res.json(pesente);
+			} else {
+				console.log(id_pesente);
+				// Tratar o caso em que id_pesente não existe (se necessário)
+				res.status(400).json({ error: 'ID de Pesente não fornecido' });
+			}
+		} catch (error) {
+			console.error(error);
+			res.status(500).json({ error: 'Erro ao procurar o pesente update' });
+		}
+	}
+
 	static async PesenteUpdate(req, res) {
 		const id_pesente = req.params.id;
 		let nome = req.body.nome;

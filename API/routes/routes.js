@@ -19,13 +19,14 @@ router.get('/', (req, res) => {
 router.post('/add_alis', aliController.AliCreate);
 router.get('/alis/:id?', aliController.AliListar);
 router.post('/update_alis/:id', aliController.UpdateAli);
-router.put('/alis_update', aliController.AliUpdate);
+router.put('/alis_update/:id', aliController.AliUpdate);
 router.delete('/alis_delete/:id', aliController.AliDelete);
 router.get('/alis_count', aliController.AliCount);
 
 // Requisições Beleza
 router.post('/add_belezas', belezaController.BelezaCreate);
 router.get('/belezas/:id?', belezaController.BelezaListar);
+router.post('/update_belezas/:id', belezaController.UpdateBeleza);
 router.put('/belezas_update/:id', belezaController.BelezaUpdate);
 router.delete('/belezas_delete/:id', belezaController.BelezaDelete);
 router.get('/belezas_count', belezaController.BelezaCount);
@@ -33,6 +34,7 @@ router.get('/belezas_count', belezaController.BelezaCount);
 // Requisições Pesente
 router.post('/add_pesentes', pesenteController.PesenteCreate);
 router.get('/pesentes/:id?', pesenteController.PesenteListar);
+router.post('/update_pesentes/:id', pesenteController.UpdatePesente);
 router.put('/pesentes_update/:id', pesenteController.PesenteUpdate);
 router.delete('/pesentes_delete/:id', pesenteController.PesenteDelete);
 router.get('/pesentes_count', pesenteController.PesenteCount);

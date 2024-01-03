@@ -31,22 +31,29 @@ module.exports = class aliController {
 
 	static async UpdateAli(req, res) {
 		try {
-			let id_ali = req.body.id_ali;
-	
-			const ali = await Ali.findOne({
-				where: { id_ali: id_ali },
-			});
-	
-			if (!ali) {
-				return res.status(404).json({ error: 'Ali não encontrado' });
+			let id_ali = req.params.id;
+
+			if (id_ali) {
+				console.log(id_ali);
+				const ali = await Ali.findOne({
+					where: { id_ali: id_ali },
+				});
+
+				if (!ali) {
+					return res.status(404).json({ error: 'Ali não encontrado' });
+				}
+
+				res.json(ali);
+			} else {
+				console.log(id_ali);
+				// Tratar o caso em que id_ali não existe (se necessário)
+				res.status(400).json({ error: 'ID de Ali não fornecido' });
 			}
-			res.json(ali);
 		} catch (error) {
 			console.error(error);
-			res.status(500).json({ error: 'Erro ao ir para update' });
+			res.status(500).json({ error: 'Erro ao procurar o ali update' });
 		}
 	}
-	
 
 	static async AliUpdate(req, res) {
 		const id_ali = req.params.id;

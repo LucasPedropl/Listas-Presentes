@@ -36,6 +36,26 @@ module.exports = class Services {
 	}
 
 	// UPDATE
+	static async UpdatePesente(req, res) {
+		try {
+			let id_pesente = req.body.id_pesente;
+
+			const options = {
+				url: 'http://localhost:3000/update_pesentes/' + id_pesente,
+				method: 'POST',
+				
+			}; 
+			const response = await axios(options);
+			console.log(response.data);
+			const pesente = response.data;
+			res.render('pesente/editarPesente', { pesente });
+		} catch (error) {
+			let id_pesente = req.params.id_pesente;
+			console.error(`Erro ao ir para update. id_pesente: ${id_pesente}, Erro: ${error}`);
+			res.status(500).json({ error: `Erro ao ir para update. id_pesente: ${id_pesente}` });
+		}
+	}
+
 	static async PesenteUpdate(req, res) {
 		try {
 			let valores = req.body;
@@ -45,10 +65,10 @@ module.exports = class Services {
 				data: valores,
 			};
 			await axios(options);
-			res.render('pesente/listarPesente');
+			res.redirect('pesente/listarPesente', { valores });
 		} catch (error) {
 			console.error(error);
-			res.status(500).json({ error: 'Erro Interno do Servidor' });
+			res.status(500).json({ error: 'Erro no update' });
 		}
 	}
 

@@ -1,18 +1,17 @@
 <main>
-	<a href="/beleza/cadastrarBeleza">
+	<a href="/ali/cadastrarAli">
 		<div id="cadastro">
 			<div id="textoCadastro">
-				Cadastrar Beleza<br />
-				é dificil quando<br />
-				vc🫵 ja é a definição dela
+				Cadastrar um Ali <br />
+				Meu Bebe?
 			</div>
 		</div>
 	</a>
 
 	<div id="tituloCadastrados">
-		<p>Belezas Cadastradas:</p>
+		<p>Ali's Cadastrados:</p>
 	</div>
-	{{#each beleza}}
+	{{#each ali}}
 
 	<div class="iten">
 		<div class="img">
@@ -23,18 +22,19 @@
 			<p>R$ {{this.preco}}</p>
 			<p>Numero: {{@index}}</p>
 			<div class="botoes">
-				
-				
-					<a href="{{this.link}}">
+				<a href="{{this.link}}">
 					<input type="submit" value="Visitar" name="Visitar" class="olhar" />
 				</a>
-				
-				<form action="/beleza/Belezaeditar" method="POST">
-					<input type="hidden" name="id_beleza" value="{{this.id_beleza}}" />
-					<input type="submit" value="Editar" name="Excluir" class="editar"/>
+				<form action="/ali/Alieditar" method="POST">
+					<input type="hidden" name="id_ali" value="{{this.id_ali}}" />
+					<input type="submit" value="Excluir" name="Excluir" />
 				</form>
-				<form class="borde-0 m-0" action="/beleza/excluirBeleza" method="POST">
-					<input type="hidden" name="id_beleza" value="{{this.id_beleza}}" />
+				<a href="/ali/editarAli/{{this.id_ali}}">
+					<input type="submit" value="Editar" name="Editar" class="editar" />
+				</a>
+
+				<form class="borde-0 m-0" action="/ali/excluirAli" method="POST">
+					<input type="hidden" name="id_ali" value="{{this.id_ali}}" />
 					<a href="">
 						<input type="submit" value="Excluir" name="Excluir" class="excluir" />
 					</a>
